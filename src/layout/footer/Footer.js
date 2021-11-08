@@ -1,8 +1,26 @@
 import * as React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 
-const Footer = ({children}) => {
+import Divider from '@mui/material/Divider';
+import Typography from "@mui/material/Typography";
+
+const Footer = () => {
+  const {site: {siteMetadata: { title }}} = useStaticQuery(graphql`{
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+  `)
+
   return (
     <footer>
+        <Divider>
+          <Typography>
+          {title}
+          </Typography>
+        </Divider>
     </footer>
   )
 }

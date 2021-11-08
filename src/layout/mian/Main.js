@@ -1,9 +1,13 @@
 import * as React from "react"
 
+import Container from '@mui/material/Container';
+
 const Main = ({children}) => {
   return (
     <main>
-        {children}
+        <Container maxWidth="lg">
+            {children}
+        </Container>     
     </main>
   )
 }
