@@ -2,6 +2,16 @@ module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
     title: "gatsby-blog-md",
+    menu: [
+      {
+        title: "opcja 1",
+        link: "/option-1"
+      },
+      {
+        title: "opcja 2",
+        link: "/option-2"
+      }
+    ]
   },
   plugins: [
     "gatsby-plugin-styled-components",
